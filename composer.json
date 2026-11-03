@@ -1,0 +1,61 @@
+{
+    "name": "microweber-packages/microweber-filament-modal-teleport",
+    "description": "Fixes inline Filament action modals rendered un-clickable because the focus-trap marks an ANCESTOR (.fi-main) `inert`, which propagates into the modal. Clears the stray inert in place (no DOM move, so Livewire wire:model/wire:submit keep working). Self-healing MutationObserver; supports nested/stacked modals. Drop-in plugin for any Filament v3/v4/v5 project.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MicroweberPackages\\FilamentModalTeleport\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MicroweberPackages\\FilamentModalTeleport\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Peter Ivanov",
+            "email": "peter@microweber.com"
+        },
+        {
+            "name": "Microweber",
+            "email": "info@microweber.com"
+        },
+        {
+            "name": "Bozhidar Slaveykov",
+            "email": "bobi@microweber.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "microweber-packages/microweber-package": "*",
+        "spatie/laravel-package-tools": "^1.16"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0",
+        "filament/filament": "^3.0|^4.0|^5.0",
+        "livewire/livewire": "^3.0|^4.0"
+    },
+    "suggest": {
+        "filament/filament": "Required for Filament panel integration",
+        "livewire/livewire": "Required for Livewire component testing"
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "homepage": "http://microweber.com",
+    "support": {
+        "email": "support@microweber.com"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "replace": {
+        "microweber-packages/filament-modal-teleport": "*"
+    }
+}
